@@ -1,0 +1,199 @@
+:root {
+    --cards-bg: hsl(300, 43%, 22%);
+    --heading-ratingTxt: hsl(300, 43%, 22%);
+    --verified-buyer: hsl(333, 80%, 67%);
+    --txt: hsl(303, 10%, 53%);
+    --rating-bg: hsl(300, 24%, 96%);
+    --blocquote-heading: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 80%;
+}
+
+/* TOP CONTAINER */
+.top-container {
+    display: flex;
+    padding-bottom: 2.7rem;
+    max-width: 1040px;
+}
+.products {
+    width: 50%;
+    padding-right: 9rem;
+}
+.products h1 {
+    font-size: 3rem;
+    color: var(--heading-ratingTxt);
+    line-height: 0.85;
+    letter-spacing: -2px;
+    padding-bottom: 1.5rem;
+}
+.products p {
+    color: var(--txt);
+    line-height: 1.4;
+}
+
+.rating {
+    width: 50%;
+}
+.stars {
+    display: flex;
+}
+.star {
+    padding-right: 0.5rem;
+}
+
+.rate {
+    display: flex;
+    background-color: var(--rating-bg);
+    color: var(--heading-ratingTxt);
+    margin: 1rem;
+    padding: 1rem 0rem 1rem 2rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    align-items: center;
+}
+.rate p {
+    padding-left: 1rem;
+}
+
+/* 
+POSITION RATE
+*/
+.rate.reviews {
+    margin-right: 6.5rem;
+    margin-left: -1rem;
+}
+.rate.report {
+    margin-right: 4rem;
+    margin-left: 2rem;
+}
+.rate.besttech {
+    margin-right: 1.5rem;
+    margin-left: 5rem;
+}
+/* 
+*/
+
+/* CARDS */
+.cards {
+    display: flex;
+    max-width: 1040px;
+}
+.cards > article {
+    background-color: var(--cards-bg);
+    padding: 2.2rem 2rem;
+    margin-right: 1.5rem;
+    border-radius: 0.5rem;
+}
+.cards blockquote {
+    color: var(--blocquote-heading);
+    line-height: 1.3;
+}
+
+/* 
+POSITION CARDS
+*/
+.irene {
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+}
+.anne {
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+}
+/* 
+*/
+
+header {
+    display: flex;
+    padding-bottom: 1.5rem;
+}
+header img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+header h2 {
+    color: var(--blocquote-heading);
+    font-size: 0.9rem;
+}
+header p {
+    color: var(--verified-buyer);
+}
+
+.buyer {
+    margin-left: 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+    /* COLUMN and CENTER */
+    main {
+        padding: 5rem 0;
+        max-width: 90%;
+    }
+    .top-container, .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-container {
+        text-align: center;
+    }
+    .products {
+        width: 100%;
+        padding-right: 0;
+    }
+    .products h1 {
+        font-size: 2.3rem;
+    }
+
+    .rating{
+        width: 100%;
+    }
+    .rate {
+        flex-direction: column;
+    }
+    .rate p {
+        padding-left: 0;
+        padding-top: 0.5rem;
+    }
+    .stars {
+        display: flex;
+    }
+
+    .rate.reviews {
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+    .rate.report {
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+    .rate.besttech {
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+
+    .cards {
+        margin-right: -1.5rem;
+    }
+}
